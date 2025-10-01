@@ -9,9 +9,9 @@ env:
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: 
-      MONGODB_USERNAME:
-      MONGODB_PASSWORD:
+      MONGODB_CLUSTER_ADDRESS: ${{secrets.MONGODB_ADRESS}}
+      MONGODB_USERNAME: ${{secrets.mongodb_user}}
+      MONGODB_PASSWORD: ${{secrets.mongodb_password}}
     environment: testing
     runs-on: ubuntu-latest
     steps:
